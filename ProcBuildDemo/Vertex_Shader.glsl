@@ -1,9 +1,8 @@
 #version 430 core
 
+layout(location = 0) in vec3 in_position; // the location 0 holds the position sent by the program
 void main(void)
 {
-    const vec4 vertices[3] = vec4[3](vec4( 0.25, -0.25, 0.5, 1.0),
-                                     vec4(-0.25, -0.25, 0.5, 1.0),
-                                     vec4( 0.25, 0.25, 0.1, 1.0));
-    gl_Position = vertices[gl_VertexID];
+    // notice conversion to vec4
+    gl_Position = vec4(in_position, 1.0); // w = 1.0, point position in space
 }

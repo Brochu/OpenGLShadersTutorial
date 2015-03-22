@@ -29,3 +29,6 @@
 
 # VS2013 files
 *.opensdf
+
+# Vim files
+*~
